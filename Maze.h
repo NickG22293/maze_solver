@@ -17,6 +17,7 @@ public:
 private:
 	SolverPool 	m_Pool; 
 	Grid 		m_Grid; 
+	int			m_GridSize;
 
 	// Kick off execution of solving the maze
 	void Solve(); 
