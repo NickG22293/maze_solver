@@ -1,5 +1,9 @@
 /* this will hold all concurrently executing threads of Solvers
    attempting to solve the maze. */ 
+#include "Solver.h"
+#include <vector>
+#include <queue>
+#include <mutex>
 
 class SolverPool
 {
@@ -15,4 +19,4 @@ private:
 	std::queue<Solver> 		taskQueue;
 	std::mutex 				pool_mutex; 
 	std::condition_variable pool_CV; 
-}
+};
