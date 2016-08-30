@@ -1,24 +1,24 @@
+#include <vector>
+#include <memory>
+
 /* generic coordinate Point struct */ 
 struct Point 
 {
 	int x = -1; 
 	int y = -1; 
-}
+};
 
 enum eNodeStatus
 {
-	START, 
+	START,
 	NEUTRAL,
 	END
-}
+};
 
-/* the maze is made up of series of Nodes in a grid 
-   a Node is just coordinates, and links to connecting 
-   nodes. One node will have starting condition, 
-   and another will have ending condition */
+/* the maze is made up of series of Nodes in a grid a Node is just coordinates, and links to connecting 
+   nodes. One node will have starting condition, and another will have ending condition */
 class Node 
 {
-	typedef NodeStatus int; 
 public: 
 	Node(); 
 	Node(int x, int y); 
@@ -38,5 +38,5 @@ private:
 	// Container of all connected nodes (max 4)
 	std::vector<const Point> m_ConnectingNodes;
 	Point m_Coords; 
-	NodeStatus m_Status; 	
-} 
+	eNodeStatus m_Status; 	
+};
