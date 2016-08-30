@@ -35,6 +35,11 @@ bool Node::isDeadEnd()
 	return (m_ConnectingNodes.size() > 0); 
 }
 
+void Node::ChangeNodeStatus(eNodeStatus status)
+{
+	m_Status = status; 
+}
+
 bool Node::isEnd()
 {
 	return m_Status = END; 

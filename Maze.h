@@ -23,8 +23,8 @@ private:
 	// Run through and create connections between nodes
 	void ConnectMaze(); 
 	// Set the end and beginning nodes
-	void MakeNodeEnd(Node n); 
-	void MakeNodeBeginning(Node n);
+	void MakeNodeEnd(Node& n); 
+	void MakeNodeBeginning(Node& n);
 	// Create the grid
 	void CreateGrid(); 
 };

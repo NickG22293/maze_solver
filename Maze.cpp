@@ -17,6 +17,7 @@ Maze::Maze(int grid_size)
 
 void Maze::Solve()
 {
+	// TODO: this will be very end-level stuff
 	throw NotImplementedException();
 }
 
@@ -25,14 +26,14 @@ void Maze::ConnectMaze()
 	throw NotImplementedException();
 }
 
-void Maze::MakeNodeEnd(Node n)
+void Maze::MakeNodeEnd(Node& n)
 {
-	throw NotImplementedException();
+	n.ChangeNodeStatus(END);
 }
 
-void Maze::MakeNodeBeginning(Node n)
+void Maze::MakeNodeBeginning(Node& n)
 {
-	throw NotImplementedException();
+	n.ChangeNodeStatus(START); 
 }
 
 void Maze::CreateGrid()

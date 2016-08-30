@@ -33,6 +33,7 @@ public:
 	bool isEnd(); 
 	// No connecting nodes besides previous 
 	bool isDeadEnd(); 
+	void ChangeNodeStatus(eNodeStatus status); 
 
 private:	
 	// Connect given node to this 
