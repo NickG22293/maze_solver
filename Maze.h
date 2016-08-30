@@ -11,8 +11,8 @@ public:
 	//Maze(SolverPool pool); 	
 
 private:
-	SolverPool 	m_Pool; 
-	Grid 		m_Grid; 
+	SolverPool 	m_pool; 
+	Grid 		m_grid; 
 
 	// Kick off execution of solving the maze
 	void Solve(); 
