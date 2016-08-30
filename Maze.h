@@ -12,12 +12,11 @@ class Maze
 public:
 	Maze(); 
 	Maze(int grid_size); 
-	//Maze(SolverPool pool); 	
 
 private:
-	SolverPool 	m_Pool; 
-	Grid 		m_Grid; 
-	int			m_GridSize;
+	SolverPool 	m_pool; 
+	Grid 		m_grid; 
+	int			m_gridSize;
 
 	// Kick off execution of solving the maze
 	void Solve(); 
@@ -26,4 +25,6 @@ private:
 	// Set the end and beginning nodes
 	void MakeNodeEnd(Node n); 
 	void MakeNodeBeginning(Node n);
+	// Create the grid
+	void CreateGrid(); 
 };

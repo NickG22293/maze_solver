@@ -3,14 +3,16 @@
 #include <string>
 #include "Errors.h"
 
-Maze::Maze()
+Maze::Maze() : Maze(10)
 {
-
 }
 
 Maze::Maze(int grid_size)
 {
-	m_GridSize = grid_size;
+	m_gridSize = grid_size;
+
+	// construct and fill the grid
+	CreateGrid(); 
 }
 
 void Maze::Solve()
@@ -31,4 +33,19 @@ void Maze::MakeNodeEnd(Node n)
 void Maze::MakeNodeBeginning(Node n)
 {
 	throw NotImplementedException();
+}
+
+void Maze::CreateGrid()
+{
+	// grids are all square for now
+	for (int i = 0; i < m_gridSize; i++)
+	{
+		std::vector<Node> nodeRow;
+		for (int j = 0; j < m_gridSize; j++)
+		{
+			Node *n = new Node(); 
+			nodeRow.push_back(*n); 
+		}
+		m_grid.push_back(nodeRow);
+	}
 }
