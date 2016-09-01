@@ -16,6 +16,7 @@ public:
 	Maze(int grid_size); 
 	// Create the grid
 	void CreateGrid(); 
+	void PrintMaze(); 
 
 private:
 	SolverPool 	m_pool; 
@@ -29,4 +30,8 @@ private:
 	// Set the end and beginning nodes
 	void MakeNodeEnd(Node& n); 
 	void MakeNodeBeginning(Node& n);
+	// Choose where the beginning and end nodes reside
+ 	void ChooseMazeEnd(); 
+	void ChooseMazeStart();
+	Node* ChooseRandomPerimeterNode(); 
 };

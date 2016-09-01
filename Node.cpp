@@ -19,7 +19,7 @@ Node::Node(Point* p)
 	m_Status = NEUTRAL; 
 }
 
-void Node::ConnectNode(std::unique_ptr<Node> n)
+void Node::ConnectToOtherNode(std::unique_ptr<Node> n)
 {
 	//TODO: we'll flesh this out once all classes have been stubbed 
 	throw new NotImplementedException(); 
@@ -43,6 +43,11 @@ void Node::ChangeNodeStatus(eNodeStatus status)
 bool Node::isEnd()
 {
 	return (m_Status == END); 
+}
+
+bool Node::isStart()
+{
+	return (m_Status == START); 
 }
 
 void Node::SetCoords(Point* p)

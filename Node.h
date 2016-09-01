@@ -32,6 +32,7 @@ public:
 	Point GetCoords();
 	// End condition 
 	bool isEnd();
+	bool isStart(); 
 	// No connecting nodes besides previous 
 	bool isDeadEnd();
 	void ChangeNodeStatus(eNodeStatus status);
@@ -39,7 +40,7 @@ public:
 
 private:
 	// Connect given node to this 
-	void ConnectNode(std::unique_ptr<Node> n);
+	void ConnectToOtherNode(std::unique_ptr<Node> n);
 
 	// Container of all connected nodes (max 4)
 	std::vector<Point> m_ConnectingNodes;
