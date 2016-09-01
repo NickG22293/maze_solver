@@ -27,6 +27,9 @@
     <ClCompile Include="SolverPool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LeftHandSolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Maze.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Errors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LeftHandSolver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

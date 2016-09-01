@@ -1,7 +1,12 @@
+#pragma once
+
 #include "Maze.h"
 #include <exception>
 #include <string>
 #include "Errors.h"
+#include <iostream>
+
+#define DEBUG 1
 
 Maze::Maze() : Maze(10)
 {
@@ -15,12 +20,6 @@ Maze::Maze(int grid_size)
 	CreateGrid(); 
 }
 
-void Maze::Solve()
-{
-	// TODO: this will be very end-level stuff
-	throw NotImplementedException();
-}
-
 void Maze::ConnectMaze()
 {
 	throw NotImplementedException();
@@ -28,25 +27,35 @@ void Maze::ConnectMaze()
 
 void Maze::MakeNodeEnd(Node& n)
 {
-	n.ChangeNodeStatus(END);
+	eNodeStatus e = END; 
+	n.ChangeNodeStatus(e);
 }
 
 void Maze::MakeNodeBeginning(Node& n)
 {
-	n.ChangeNodeStatus(START); 
+	eNodeStatus e = START; 
+	n.ChangeNodeStatus(e); 
 }
 
 void Maze::CreateGrid()
 {
 	// grids are all square for now
-	for (int i = 0; i < m_gridSize; i++)
+	for (int row = 0; row < m_gridSize; row++)
 	{
 		std::vector<Node> nodeRow;
-		for (int j = 0; j < m_gridSize; j++)
+		for (int col = 0; col < m_gridSize; col++)
 		{
-			Node *n = new Node(); 
+			Node* n = new Node(); 
+			Point* p = new Point(row, col); 
+			n->SetCoords(p); 
 			nodeRow.push_back(*n); 
 		}
 		m_grid.push_back(nodeRow);
 	}
+}
+ 
+int main()
+{
+	Maze m(); 
+	Maze m2(4); 
 }

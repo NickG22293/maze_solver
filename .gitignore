@@ -2,3 +2,5 @@
 *.VC.db
 *.suo
 /Debug
+*.TMP
+*.tmp

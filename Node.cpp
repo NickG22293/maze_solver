@@ -42,7 +42,7 @@ void Node::ChangeNodeStatus(eNodeStatus status)
 
 bool Node::isEnd()
 {
-	return m_Status = END; 
+	return (m_Status == END); 
 }
 
 void Node::SetCoords(Point* p)

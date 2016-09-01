@@ -78,7 +78,7 @@
     <Link>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -97,6 +97,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LeftHandSolver.cpp" />
     <ClCompile Include="Maze.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Solver.cpp" />
@@ -104,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Errors.h" />
+    <ClInclude Include="LeftHandSolver.h" />
     <ClInclude Include="Maze.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Solver.h" />

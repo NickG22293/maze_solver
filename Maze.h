@@ -1,3 +1,5 @@
+#pragma once
+
 /* A maze is comprised of many nodes, linked together with two nodes 
    representing beginning and end. Solver's will attempt to find the 
    end of the graph, possibly in a variety of algorithmic ways. */ 
@@ -12,6 +14,8 @@ class Maze
 public:
 	Maze(); 
 	Maze(int grid_size); 
+	// Create the grid
+	void CreateGrid(); 
 
 private:
 	SolverPool 	m_pool; 
@@ -25,6 +29,4 @@ private:
 	// Set the end and beginning nodes
 	void MakeNodeEnd(Node& n); 
 	void MakeNodeBeginning(Node& n);
-	// Create the grid
-	void CreateGrid(); 
 };

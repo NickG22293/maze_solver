@@ -9,7 +9,7 @@ class SolverPool
 {
 public: 
 	SolverPool(); 
-	SolverPool(size_t solvers); 
+	SolverPool(unsigned int solvers); 
 	auto enqueue_solver(Solver solver); 	
 	
 private: 
